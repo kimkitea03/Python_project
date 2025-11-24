@@ -1,18 +1,19 @@
 breadString = "바게트,크로와상,스콘,치아바타,나쵸,식빵,스콘,호밀빵,베이글"
-breadList = breadString.split(',')
+breadList = breadString.split(",")
 
 breadTuple = tuple(breadList)
-print(breadTuple)
+print("원본 튜플:", breadTuple)
 
-breadcount = breadTuple.count('스콘')
-print('스콘 개수 : %d'%breadcount)
-breadindex = breadTuple.index('스콘')
-print('스콘 첫 번째 인덱스 : %d'%breadindex)
-newtuple = breadTuple[:3]+breadTuple[-3:]
-print('새로운 튜플 : ',newtuple)
+print("스콘 개수:", breadTuple.count("스콘"))
+print("스콘 첫 번째 인덱스:", breadTuple.index("스콘"))
 
-newList = list(newtuple)
-# print(type(newList))
+tuple01 = breadTuple[:3]  # 앞에서 3개
+tuple02 = breadTuple[-3:] # 뒤에서 3개
+
+newTuple = tuple01 + tuple02
+print("새로운 튜플:", newTuple)
+
+newList = list(newTuple)
+print('오름차순 정렬')
 newList.sort()
-print("오름차순 정렬")
 print(newList)

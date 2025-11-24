@@ -1,34 +1,22 @@
-coffee01 = ('아메리카노','카페라떼')
-coffee02 = ('콜드브루','아이스커피')
+coffee01 = ('아메리카노', '카페라떼')
+coffee02 = ('콜드브루', '아이스커피')
 # 소괄호 없이 콤마로 연결하면 무조건 tuple입니다.
-coffee03 = '카푸치노','마키야또'
+coffee03 = '카푸치노', '마키야또'
 
-print('자료형 타입 : ',end='')
+print('자료형 타입 : ', end='')
 print(type(coffee01))
-print(type(coffee03))
 
-mylist = ['바닐라라떼','플랫화이트']
+mylist = ['바닐라라떼', '플랫화이트']
 coffee04 = tuple(mylist)
 
-# +기호를 사용하여 기존 요소에 새로운 요소를 추가합니다.
+# + 기호를 사용하여 기존 요소에 새로운 요소를 추가합니다.
 coffees = coffee01 + coffee02 + coffee03 + coffee04 + ('에스프레소',)
 
 length = len(coffees)
 print('요소 개수 : %d' % length)
 
-'''
-튜플과 리스트의 차이점
-튜플은 편집 불가
-리스트는 편집 가능
-한마디로 쓰기 작업이 가능하냐 안되냐
-
-튜플은 사용가능한 함수가 index, count만 가능
-
-연산속도가 빨리 되어야하면 튜플
-수정을 해야하면 리스트
-'''
-
-# coffees[1] = '고구마라떼' 튜플은 쓰기 작업 불가능
+# 1번째 요소를 '고구마라떼'로 변경해보세요
+# coffees[1] = '고구마라떼' # 튜플은 쓰기 작업 불가능
 
 # 인덱싱
 print('앞에서 2번째 요소 : %s' % coffees[2])
@@ -54,4 +42,13 @@ mycount = coffees.count('아메리카노')
 print('아메리카노의 개수 : %d' % mycount)
 
 myindex = coffees.index('콜드브루')
-print('콜드부루의 인덱스 번호 : %d' % myindex)
+print('콜드브루의 인덱스 번호 : %d' % myindex)
+
+
+
+
+
+
+
+
+
