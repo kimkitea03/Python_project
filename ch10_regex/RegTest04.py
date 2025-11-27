@@ -1,0 +1,45 @@
+import re
+
+
+
+########################################################################
+# RegTest04.py
+########################################################################
+print('1) split 함수를 사용하여 데이터를 사전으로 변환하기')
+mystring01 = '사과:10/오렌지:20/감:30/밤:40'
+regEx = '/'
+pattern = re.compile(regEx)
+fruitDict = dict(item.split(':') for item in mystring01.split('/'))
+
+# 리스트를 2개씩 묶어 사전으로 변환
+print(fruitDict)
+
+# 출력 예: {'사과': '10', '오렌지': '20', '감': '30', '밤': '40'}
+
+print('\n2) sub 함수를 사용하여 -를 /로 변경하기')
+mylist = ['광복절 : 1945-08-15', '삼일절 : 1919-03-01']
+regEx = '-'
+pattern = re.compile(regEx)
+
+liberation_day, March_1st = [pattern.sub('/', item) for item in mylist]
+
+print(liberation_day)
+print(March_1st)
+
+
+
+    # print(f'count : {idx} → {result}')
+
+
+# 하이픈(-)을 슬래시(/)로 변경
+# 출력 예:
+# 광복절 : 1945/08/15
+# 삼일절 : 1919/03/01
+
+# 실행 결과
+# 1) split 함수를 사용하여 데이터를 사전으로 변환하기
+# {'사과': '10', '오렌지': '20', '감': '30', '밤': '40'}
+#
+# 2) sub 함수를 사용하여 -를 /로 변경하기
+# 광복절 : 1945/08/15
+# 삼일절 : 1919/03/01
